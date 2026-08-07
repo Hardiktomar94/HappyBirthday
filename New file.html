@@ -193,24 +193,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
         <div class="container">
-            <img src="file:///storage/emulated/0/Pictures/Picsart/Picsart_26-08-02_16-36-27-158.png"
+            <img src="halfheart.png"
             id="images" alt="image" class="image1">
             
             <div class="ballon">
-            <img src="file:///storage/emulated/0/Pictures/Remove.bg/ei_1786031111347-removebg-preview.png">
+            <img src="ballons.png">
             <div class="ballon2">
-                <img src="file:///storage/emulated/0/Pictures/Remove.bg/ei_1786031111347-removebg-preview.png">
+                <img src="ballons.png">
             </div>
         </div>
         <div class="cake">
-            <img src="file:///storage/emulated/0/Pictures/Remove.bg/ei_1786026906980-removebg-preview.png">
+            <img src="cake.png">
         </div>
         </div>
         
         <div class="text">Click On Image</div>
         <div class="container2">
         <div class="page">
-            <img src="file:///storage/emulated/0/DCIM/Screenshots/IMG_20260807_155558.jpg" id="questionimg">
+            <img src="kitten.jpg" id="questionimg">
            <h3 id="question" >Hellow, Did You Like It?</h3>
            
            <div class="buttons">
@@ -233,10 +233,10 @@
            
            
            img.onclick = function () {
-               if (img.src.includes("Picsart_26-08-02_16-36-27-158.png"))
-               {img.src="file:///storage/emulated/0/Pictures/Picsart/Picsart_26-08-07_22-07-31-283.png";}
+               if (img.src.includes("halfheart.png"))
+               {img.src="fullheart.png";}
                else {
-                   img.src="file:///storage/emulated/0/Pictures/Picsart/Picsart_26-08-02_16-36-27-158.png";
+                   img.src="halfheart.png";
                }
              
             container.classList.toggle("start");
@@ -256,7 +256,7 @@
           const story = {
               start: {
                   text: "Hellow Did You Like It?",
-                  img:"file:///storage/emulated/0/DCIM/Screenshots/IMG_20260807_155558.jpg",
+                  img:"kitten.jpg",
                   yes: "happy",
                   no: "Why"
               }, 
