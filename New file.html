@@ -373,9 +373,16 @@ no.innerHTML = data.noText || "NO";
               };
               
               no.onclick = function() {
-                  current = story[current].no; 
-                  showQuestion();
-              }; }
+    const next = story[current].no;
+
+    if (next.endsWith(".html")) {
+        window.location.href = next;
+    } else {
+        current = next;
+        showQuestion();
+    }
+};
+               }
               
               showQuestion();
           
