@@ -1,0 +1,385 @@
+<html>
+    <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <body>
+        
+        <style>
+            body{
+                background:pink;
+            }
+            .container{
+                background:wheat;
+                border:5px outset white;
+                width:300px;
+                height:500px;
+                margin-left:20px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                overflow:hidden;
+                position:relative;
+                border-radius:15px;
+                
+                
+            }
+            .image1{
+                width:300px;
+                height:auto;
+                cursor:pointer;
+            }
+            *{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ballon img{
+    width:160px;
+    height:auto;
+    transform:translate(10px,-140px)  rotate(315deg);
+    position:absolute;
+    overflow:hidden;
+   animation:none;
+}
+       
+       @keyframes moveballon {
+           from {transform: translate(0,-140px) rotate(325deg);}
+           to 
+           {transform: translate(-120px,-250px) rotate(325deg);
+           }
+       }
+       
+       .ballon2 img {
+           width:160px;
+    height:auto;
+    transform:translate(-500px,300px)  rotate(45deg);
+    position:absolute;
+    overflow:hidden;
+   animation:none;
+       }
+       
+       @keyframes moveballon2{
+           from{
+               transform:translate(-500px,200px)
+               rotate(30deg);
+           }
+           to {transform:translate(-350px,70px) rotate(30deg);
+               
+           }
+       }
+       
+       .cake img{
+           width:320px;
+           height:auto;
+           position: absolute;
+           transform: translate(-300px,300px);
+           animation:none;
+       }
+       @keyframes movecake{
+           from{
+               transform:translate(-300px,200px);
+           }
+           to{
+               transform:translate(-300px,80px);
+           }
+       }
+       
+.container.start .ballon img{
+    animation: moveballon 1.0s linear forwards;
+}
+
+.container.start .ballon2 img{
+    animation: moveballon2 0.9s linear forwards;
+}
+
+.container.start .cake img{
+    animation: movecake 0.9s linear forwards;
+}
+
+
+
+.text {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:20px;
+    font-family: Bebes Neue;
+    font-weight:bold;
+}
+
+.page{
+    width:80%;
+    height:500px;
+    border:3px groove White;
+    background:wheat;
+    margin-top:700px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:Bangers;
+    flex-direction:column;
+    text-align:center;
+}
+.bangers-regular {
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.page img{
+    margin-top:10px;
+    width:100px;
+    border-radius:10px;
+    border:3px dashed White;
+    
+}
+
+
+.yes{
+    border-radius:999px;
+    width:auto;
+    height:35px;
+    font-family:Bebas neue;
+}
+
+.no{
+    border-radius:999px;
+    width:auto;
+    height:35px;
+    font-family:Bebas neue;
+}
+
+
+
+.container2{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+
+.footer{
+    margin-top:100px;
+}
+
+
+
+
+
+
+#question{
+    white-space: pre-line;
+    line-height:1.5;
+}
+
+
+
+
+
+
+
+
+
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <div class="container">
+            <img src="file:///storage/emulated/0/Pictures/Picsart/Picsart_26-08-02_16-36-27-158.png"
+            id="images" alt="image" class="image1">
+            
+            <div class="ballon">
+            <img src="file:///storage/emulated/0/Pictures/Remove.bg/ei_1786031111347-removebg-preview.png">
+            <div class="ballon2">
+                <img src="file:///storage/emulated/0/Pictures/Remove.bg/ei_1786031111347-removebg-preview.png">
+            </div>
+        </div>
+        <div class="cake">
+            <img src="file:///storage/emulated/0/Pictures/Remove.bg/ei_1786026906980-removebg-preview.png">
+        </div>
+        </div>
+        
+        <div class="text">Click On Image</div>
+        <div class="container2">
+        <div class="page">
+            <img src="file:///storage/emulated/0/DCIM/Screenshots/IMG_20260807_155558.jpg" id="questionimg">
+           <h3 id="question" >Hellow, Did You Like It?</h3>
+           
+           <div class="buttons">
+               <button id="yes" class="yes">
+                   YES
+               </button>
+               
+               <button id="no" class="no">
+                   No
+               </button>
+           </div>
+        </div>
+        </div>
+        <div class="footer"></div>
+       <script>
+           const img =
+           document.getElementById("images");
+           
+           const container = document.querySelector(".container");
+           
+           
+           img.onclick = function () {
+               if (img.src.includes("Picsart_26-08-02_16-36-27-158.png"))
+               {img.src="file:///storage/emulated/0/Pictures/Picsart/Picsart_26-08-07_22-07-31-283.png";}
+               else {
+                   img.src="file:///storage/emulated/0/Pictures/Picsart/Picsart_26-08-02_16-36-27-158.png";
+               }
+             
+            container.classList.toggle("start");
+             
+              };
+              
+          const question = document.getElementById("question");
+          
+          const questionimg = document.getElementById("questionimg");
+          
+          const yes = document.getElementById("yes");
+          
+          const no = document.getElementById("no");
+          
+          
+          
+          const story = {
+              start: {
+                  text: "Hellow Did You Like It?",
+                  img:"file:///storage/emulated/0/DCIM/Screenshots/IMG_20260807_155558.jpg",
+                  yes: "happy",
+                  no: "Why"
+              }, 
+              
+               happy: {
+     text: "Aww Really? I have Something To Show U, Should I?",
+     
+     img:"file:///storage/emulated/0/DCIM/Screenshots/Screenshot_2026-04-27-17-47-55-15.jpg",
+     
+     yes:"show",
+     yesText:"Yessss🌼"
+     
+     
+ },
+              
+              Why: {
+                  text: "Why? I made it with Pure heart and Joy 🥀😭, I have Something For U",
+                  img:"file:///storage/emulated/0/DCIM/Screenshots/IMG_20260807_162711.jpg",
+                  
+                   yes:"show",
+                   yesText:"Show 🎀"
+                           
+                  
+              },
+              
+              show:{
+                  
+                  img:"file:///storage/emulated/0/DCIM/Screenshots/IMG_20260807_200436.jpg",             
+                  text:`U said u love long paragraph
+But 
+No paragraph can describe your worth 
+I would like to use the least words I can 
+The more I uses 
+The more comparable u become
+Something's are meant to be feel not to be explain 
+That's makes us different from robots 
+That's what make us living.`,
+
+             yes:"Next",
+             yesText:"Awwww✨"
+              },
+              
+              Next: {
+                  
+                  img:"file:///storage/emulated/0/DCIM/Screenshots/Screenshot_2025-06-13-11-32-53-49.jpg",
+                  text:"The More I know about you the more I realted with you",
+                  yes:"okay",
+                  yesText:"I Know🤗"
+              },
+              
+              okay:{
+                  
+                  img:"file:///storage/emulated/0/DCIM/Screenshots/IMG_20260807_204616.jpg",
+                  text:"U said Being trust worthy is more better than being Lovable",
+                  yes:"forward",
+                  no:"other"
+                 
+              },
+              
+              forward:{
+                  img:"file:///storage/emulated/0/DCIM/Screenshots/Screenshot_2026-06-01-22-24-17-48.jpg",
+                  text:"Then I Think I Should fall for ya",
+                  yes:"yayy",
+                  no:"other"
+              },
+              
+              other:{
+                  img:"file:///storage/emulated/0/DCIM/Screenshots/Screenshot_2026-08-07-20-52-02-15.jpg",
+                  text:"U don't know even dog takes notes from my loyalty",
+                  
+                  yes:"forward2",
+                  yesText:"ohhww😋"
+              },
+              
+              forward2:{
+                  
+                  img:"file:///storage/emulated/0/DCIM/Screenshots/Screenshot_2026-06-01-22-24-17-48.jpg",
+                  text:"Then I Think I Should fall for ya, Click Yess",
+                  no:"nextpage.html",
+                  yes:"yayy"
+                  
+              },
+              
+              yayy:{
+                 img:"file:///storage/emulated/0/DCIM/Screenshots/Screenshot_2026-06-11-21-41-34-47.jpg", text:`Yayyyyyyyyyyyyyyyyyyyyyyyy
+                 yyyyyyyyyyyyyyyyyyyyyyyyy
+                 yyyyyyyyyyyyyyyyyyyyyyyyy
+                 yyyyyyyyyyyyyyyyyyyyyyyyy
+                 yyyyyyyyyyyyyyyyyyyyyyyyy
+                 yyyyyyyyyyyyyyyyyyyyyyyyy`
+              }
+               }
+          
+          
+          let current = "start";
+          function showQuestion() {
+              
+              const data = story[current];
+              
+              question.textContent = data.text;
+              questionimg.src = data.img;
+              
+              yes.style.display = data.yes ?
+              "inline-block":"none";
+              no.style.display = data.no ?
+              "inline-block":"none";
+              
+              yes.innerHTML = data.yesText || "YES";
+no.innerHTML = data.noText || "NO";
+
+              yes.onclick = function() {
+                  current = story[current].yes; 
+                  showQuestion();
+              };
+              
+              no.onclick = function() {
+                  current = story[current].no; 
+                  showQuestion();
+              }; }
+              
+              showQuestion();
+          
+       </script>
+
+    </body>
+</html>

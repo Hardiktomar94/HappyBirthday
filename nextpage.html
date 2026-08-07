@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <style>
+            
+            body{
+                background:pink;
+                
+            }
+            
+            
+            .bigcontainer{
+                border:2px solid black;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                text-align:center;
+                font-family:Bebas Neue;
+                background:wheat;
+                
+                
+            }
+            
+            .container{
+                border:2px solid black;
+                background:wheat;
+            }
+            
+            .container img{
+                width:100px;
+                height:auto;
+            }
+            .container p{
+                margin-top:20px;
+            }
+            .button{
+                width:50px;
+                height:30px;
+                font-family:Bebas Neue;
+                margin-top:15px;
+                border-radius:10px;
+                
+            }
+            
+            #btn{
+                
+                font:30px;
+                
+            }
+        </style>
+        <div class="bigcontainer">
+        <div class="container">
+            <img src="file:///storage/emulated/0/A Birthday/kitty.jpg">
+            <p>TAP THE NO BUTTON BELOW AGAIN IF YOU DONT LIKE ME 🥀 I WILL GET A NOTIFICATION.</p>
+        </div>
+        <button class="button" id="btn">NO</button>
+        </div>
+        <script>
+           const button = document.getElementById("btn");
+
+button.onclick = function() {
+
+    button.style.position = "fixed";
+
+    const x = Math.random() * (window.innerWidth - button.offsetWidth);
+    const y = Math.random() * (window.innerHeight - button.offsetHeight);
+
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+};
+        </script>
+    </body>
+</html>
+
